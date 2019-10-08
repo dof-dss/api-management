@@ -66,3 +66,6 @@ sprockets.append_path File.join(root, 'node_modules/gaap-analytics/')
 
 # https://middlemanapp.com/advanced/pretty-urls/
 activate :directory_indexes
+
+# Read in the list of links for the header from the YAML file
+config[:settings] = YAML.load(File.read('config/settings.yml'))
